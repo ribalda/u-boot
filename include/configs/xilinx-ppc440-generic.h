@@ -33,6 +33,16 @@
 #define MTDIDS_DEFAULT			"nor0=flash"
 #define MTDPARTS_DEFAULT		"mtdparts=flash:-(user)"
 
+/*Net*/
+#ifdef XPAR_LLTEMAC_0_BASEADDR
+#define CONFIG_XILINX_LL_TEMAC
+#define CONFIG_MII
+#define CONFIG_PHYLIB
+#define CONFIG_PHY_MARVELL
+#define CONFIG_NET_RANDOM_ETHADDR
+#define CONFIG_LIB_RAND
+#endif
+
 /*Generic Configs*/
 #include <configs/xilinx-ppc.h>
 
